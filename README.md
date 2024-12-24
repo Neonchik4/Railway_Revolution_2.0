@@ -20,6 +20,7 @@
 * OS – версия 11 и выше 
 * Mac OS X: версия El Capitan и выше,
 * Windows 10
+* Linux
 
 Браузеры:
 - Google Chrome
