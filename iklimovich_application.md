@@ -21,12 +21,12 @@
 * Windows 10
 * Linux
 
-Браузеры:
-- Google Chrome
-- Firefox
-- Яндекс Браузер
-- Opera
-- Microsoft Edge
+Браузеры (и поддерживаемые версии):
+- Google Chrome: 95 и выше
+- Firefox: 93 и выше
+- Яндекс Браузер: 21.11 и выше
+- Opera: 100 и выше
+- Microsoft Edge: 95 и выше
 
 Свободное место:
 - Оперативная память: 4 Гб
