@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .container_train_info {
+          display: flex;
+          justify-content: center;
+        }
+    </style>
+</head>
+<body>
+{% if is_authenticated %}
+<div class="container_train_info">
+    <div class="card" style="width: 18rem;">
+        <img src="/static/img/lastochka.jpg" style="width: auto; height: 205px;" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Экспресс</h5>
+            <p class="card-text" style="font-size: 21px;">Небольшой по длине состав. Ездит с довольно высокой скоростью.
+                Предназначен для перевозки пассажиров на дальние расстояния. </p>
+        </div>
+        <ul class="list-group list-group-flush" style="font-size: 20px">
+            <li class="list-group-item"></li>
+            <li class="list-group-item">Особенность: ездит через 1 станцию; возит только пассажиров</li>
+            <li class="list-group-item">Скорость: 80 км/ч</li>
+            <li class="list-group-item">Стоимость покупки: {{ lastochka_price }}</li>
+            <li class="list-group-item">Вместимость: {{ lastochka_places }} мест</li>
+        </ul>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+        <img src="/static/img/ivolga.jpg" style="width: auto; height: 205px;" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Пригородный</h5>
+            <p class="card-text" style="font-size: 21px;">Длинный состав.
+                Способен перевозить большое количество пассажиров на далёкое расстояние с обычной скоростью.
+            </p>
+        </div>
+        <ul class="list-group list-group-flush" style="font-size: 20px">
+            <li class="list-group-item"></li>
+            <li class="list-group-item">Особенность: возит только пассажиров; вместительный</li>
+            <li class="list-group-item">Скорость: 65 км/ч</li>
+            <li class="list-group-item">Стоимость покупки: {{ ivolga_price }}</li>
+            <li class="list-group-item">Вместимость: {{ ivolga_places }} мест</li>
+        </ul>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+        <img src="/static/img/locomotive.jpg" style="width: auto; height: 205px;" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Грузовой</h5>
+            <p class="card-text" style="font-size: 21px;">Длинный состав.
+                Способен перевозить большое количество пассажиров на далёкое расстояние с обычной скоростью.
+            </p>
+        </div>
+        <ul class="list-group list-group-flush" style="font-size: 20px">
+            <li class="list-group-item"></li>
+            <li class="list-group-item">Особенность: перевозит только грузы; довольно медленный</li>
+            <li class="list-group-item">Скорость: 48 км/ч</li>
+            <li class="list-group-item">Стоимость покупки: {{ locomotive_price }}</li>
+            <li class="list-group-item">Состав: {{ locomotive_lifting_capacity }} вагонов</li>
+        </ul>
+    </div>
+</div>
+</body>
+{% else %}
+<div class="alert alert-danger d-flex align-items-center" role="alert">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+         class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2" viewBox="0 0 16 16">
+        <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+    </svg>
+    <div id="div1">
+        Вы не вошли в аккаунт!
+    </div>
+</div>
+{% endif %}
+{% endblock %}
